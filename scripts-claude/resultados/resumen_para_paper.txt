@@ -1,0 +1,55 @@
+=== RESUMEN PARA EL PAPER (copiar y pegar este archivo completo) ===
+
+PARAMETROS: {"seed": 2026, "n": 20000, "periodo": ["2025-03-03", "2025-12-31"], "prob_fuente": {"A": 0.75, "B": 0.45, "C": 0.6}, "ruido": {"est_vacio": {"A": 0.005, "B": 0.02, "C": 0.03}, "fecha_vacia": {"A": 0.0, "B": 0.01, "C": 0.02}, "B_reg_mas1": 0.05, "typo": 0.02, "C_fecha_aten": 0.55, "lag_p0": {"B": 0.85, "C": 0.7}}, "prob_reasignada": 0.12, "prob_gemelas": 0.005}
+
+--- E1 | REGLA DEL PAPER (clave natural exacta) ---
+N=37,926 | x(descartados)=1,010 | y(fusionados)=16,733 | z(unicas)=20,183 | N=x+y+z: True
+Solicitudes reales=20,000 | representadas=19,868 | duplicados no detectados=439 | fusiones erroneas=124
+Dedup precision=97.96% | recall=96.97% | tasa duplicados eliminados=44.12%
+Exactitud KPI (1 - error relativo medio por celda) global=75.68% | por KPI={'K1': 98.83, 'K2': 82.375, 'K3': 46.956, 'K4': 99.636, 'K5': 99.637, 'K6': 3.765, 'K7': 75.185, 'K8': 99.08}
+Exactitud KPI (1 - WAPE) global=72.61% | por KPI={'K1': 98.925, 'K2': 95.808, 'K3': 45.254, 'K4': 99.692, 'K5': 99.639, 'K6': 0.0, 'K7': 42.02, 'K8': 99.571}
+Celdas exactas (%) por KPI={'K1': 8.0, 'K2': 7.5, 'K3': 0.0, 'K4': 20.0, 'K5': 0.0, 'K6': 0.0, 'K7': 5.0, 'K8': 10.0}
+Completitud hitos: asignacion=100.00% atencion=97.23% cierre=97.22% global=98.15%
+Hitos imputados (%): asignacion=0.62 atencion=35.80 cierre=0.00
+EXACTITUD POR SOLICITUD (dias_total y flag en_plazo correctos, solicitudes atendidas)=97.82% | Fecha de atencion exacta=97.23% | dentro de 1 dia=99.77% | dias_total exacto=97.82% | flag en_plazo discrepante=0.34%
+Error en dias_total (modelo-verdad, dias habiles): {'0': 18745, '1': 364, '-2': 16, '-1': 14, '-3': 6, '-5': 4, '-6': 3, '-9': 2, '-10': 2, '-11': 1, '-4': 1, '-8': 1, '21': 1, '-14': 1, '-7': 1}
+Pendientes fantasma (atendidas en la verdad, sin hito de atencion en el modelo)=546
+Valores globales al corte final (modelo vs verdad): {'K1': {'modelo': 20183, 'verdad': 20000, 'error_rel_pct': 0.92}, 'K3': {'modelo': 1020, 'verdad': 480, 'error_rel_pct': 112.5}, 'K6': {'modelo': 586, 'verdad': 57, 'error_rel_pct': 928.07}, 'K4': {'modelo': 5.298, 'verdad': 5.288, 'error_rel_pct': 0.2}, 'K5': {'modelo': 80.749, 'verdad': 80.922, 'error_rel_pct': 0.21}}
+
+--- E1 | REGLA MEJORADA (+-1 dia y fuentes distintas) ---
+N=37,926 | x(descartados)=1,010 | y(fusionados)=17,063 | z(unicas)=19,853 | N=x+y+z: True
+Solicitudes reales=20,000 | representadas=19,868 | duplicados no detectados=104 | fusiones erroneas=119
+Dedup precision=99.09% | recall=99.32% | tasa duplicados eliminados=44.99%
+Exactitud KPI (1 - error relativo medio por celda) global=86.10% | por KPI={'K1': 99.261, 'K2': 94.402, 'K3': 86.067, 'K4': 99.611, 'K5': 99.614, 'K6': 25.214, 'K7': 86.643, 'K8': 97.971}
+Exactitud KPI (1 - WAPE) global=83.98% | por KPI={'K1': 99.265, 'K2': 98.266, 'K3': 88.91, 'K4': 99.683, 'K5': 99.622, 'K6': 0.0, 'K7': 86.78, 'K8': 99.331}
+Celdas exactas (%) por KPI={'K1': 14.0, 'K2': 15.0, 'K3': 0.0, 'K4': 12.0, 'K5': 2.0, 'K6': 4.0, 'K7': 7.5, 'K8': 0.0}
+Completitud hitos: asignacion=100.00% atencion=99.36% cierre=99.34% global=99.57%
+Hitos imputados (%): asignacion=0.64 atencion=36.66 cierre=0.00
+EXACTITUD POR SOLICITUD (dias_total y flag en_plazo correctos, solicitudes atendidas)=97.88% | Fecha de atencion exacta=97.30% | dentro de 1 dia=99.84% | dias_total exacto=97.88% | flag en_plazo discrepante=0.31%
+Error en dias_total (modelo-verdad, dias habiles): {'0': 18852, '1': 371, '-1': 12, '-2': 6, '-3': 4, '-4': 3, '2': 2, '-10': 2, '-6': 2, '-7': 2, '3': 1, '-11': 1, '-8': 1, '21': 1, '-14': 1}
+Pendientes fantasma (atendidas en la verdad, sin hito de atencion en el modelo)=124
+Valores globales al corte final (modelo vs verdad): {'K1': {'modelo': 19853, 'verdad': 20000, 'error_rel_pct': 0.73}, 'K3': {'modelo': 591, 'verdad': 480, 'error_rel_pct': 23.12}, 'K6': {'modelo': 171, 'verdad': 57, 'error_rel_pct': 200.0}, 'K4': {'modelo': 5.3, 'verdad': 5.288, 'error_rel_pct': 0.23}, 'K5': {'modelo': 80.739, 'verdad': 80.922, 'error_rel_pct': 0.23}}
+
+--- CONTROL: carga perfecta sin ruido (valida SQL y calendario) --- exactitud global=100.00% | {'K1': 100.0, 'K2': 100.0, 'K3': 100.0, 'K4': 100.0, 'K5': 100.0, 'K6': 100.0, 'K7': 100.0, 'K8': 100.0}
+
+--- SCD2 (Certificado, solicitudes antes del cambio de SLA, n=1682) --- CSLA con SCD2=80.92% | sin SCD2=58.74%
+
+--- E2 | tiempo de respuesta por escala y cache (segundos) ---
+escala 1x | caliente: media=0.0087 p95=0.0181 max=0.0269
+escala 1x | fria: media=0.0173 p95=0.0461 max=0.0827
+escala 10x | caliente: media=0.0961 p95=0.2805 max=0.4958
+escala 10x | fria: media=0.1065 p95=0.2299 max=0.4422
+escala 100x | caliente: media=0.5206 p95=1.1614 max=1.5002
+escala 100x | fria: media=0.5530 p95=1.2813 max=1.9384
+
+--- ENTORNO ---
+python=3.13.10
+so=Windows-11-10.0.26200-SP0
+cpu_logicas_host=14
+pandas=3.1.1
+numpy=2.5.5
+db=postgres
+PostgreSQL 16.16 (Debian 16.16-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+shared_buffers=128MB
+
+Tiempo total de la simulacion: 1871.7 s

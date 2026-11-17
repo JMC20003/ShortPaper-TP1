@@ -1,0 +1,325 @@
+{
+  "parametros": {
+    "seed": 2026,
+    "n": 20000,
+    "periodo": [
+      "2025-03-03",
+      "2025-12-31"
+    ],
+    "prob_fuente": {
+      "A": 0.75,
+      "B": 0.45,
+      "C": 0.6
+    },
+    "ruido": {
+      "est_vacio": {
+        "A": 0.005,
+        "B": 0.02,
+        "C": 0.03
+      },
+      "fecha_vacia": {
+        "A": 0.0,
+        "B": 0.01,
+        "C": 0.02
+      },
+      "B_reg_mas1": 0.05,
+      "typo": 0.02,
+      "C_fecha_aten": 0.55,
+      "lag_p0": {
+        "B": 0.85,
+        "C": 0.7
+      }
+    },
+    "prob_reasignada": 0.12,
+    "prob_gemelas": 0.005
+  },
+  "control_carga_perfecta": {
+    "exactitud_global_pct": 100.0,
+    "por_kpi": {
+      "K1": 100.0,
+      "K2": 100.0,
+      "K3": 100.0,
+      "K4": 100.0,
+      "K5": 100.0,
+      "K6": 100.0,
+      "K7": 100.0,
+      "K8": 100.0
+    }
+  },
+  "e1_paper": {
+    "N": 37926,
+    "x_descartados": 1010,
+    "y_fusionados": 16733,
+    "z_unicas": 20183,
+    "conciliacion_ok": true,
+    "solicitudes_reales": 20000,
+    "registros_fuente_conservados": 36916,
+    "solicitudes_reales_representadas": 19868,
+    "duplicados_no_detectados": 439,
+    "fusiones_erroneas": 124,
+    "dedup_precision_pct": 97.9627644019885,
+    "dedup_recall_pct": 96.9702817445002,
+    "tasa_duplicados_eliminados_pct": 44.12012867162369,
+    "completitud_asignacion_pct": 100.0,
+    "hito_asignacion_exacto_pct": 96.09041231992052,
+    "hito_asignacion_dentro_1dia_pct": 99.92548435171386,
+    "hito_asignacion_imputado_pct": 0.6209637357178341,
+    "completitud_atencion_pct": 97.22955145118733,
+    "hito_atencion_exacto_pct": 97.23410917440768,
+    "hito_atencion_dentro_1dia_pct": 99.77037887485649,
+    "hito_atencion_imputado_pct": 35.8027197077329,
+    "completitud_cierre_pct": 97.21812541321263,
+    "hito_cierre_exacto_pct": 91.79221594475831,
+    "hito_cierre_dentro_1dia_pct": 99.76982632349865,
+    "hito_cierre_imputado_pct": 0.0,
+    "pendientes_fantasma": 546,
+    "completitud_hitos_global_pct": 98.14922562146666,
+    "dias_total_exacto_pct": 97.8238179730717,
+    "flag_en_plazo_discrepante_pct": 0.33921302578018997,
+    "exactitud_por_solicitud_pct": 97.8238179730717,
+    "error_dias_total_habiles": {
+      "0": 18745,
+      "1": 364,
+      "-2": 16,
+      "-1": 14,
+      "-3": 6,
+      "-5": 4,
+      "-6": 3,
+      "-9": 2,
+      "-10": 2,
+      "-11": 1,
+      "-4": 1,
+      "-8": 1,
+      "21": 1,
+      "-14": 1,
+      "-7": 1
+    },
+    "exactitud_kpi_global_pct": 75.68306510347867,
+    "exactitud_kpi_por_kpi": {
+      "K1": 98.83,
+      "K2": 82.375,
+      "K3": 46.956,
+      "K4": 99.636,
+      "K5": 99.637,
+      "K6": 3.765,
+      "K7": 75.185,
+      "K8": 99.08
+    },
+    "celdas_exactas_por_kpi": {
+      "K1": 8.0,
+      "K2": 7.5,
+      "K3": 0.0,
+      "K4": 20.0,
+      "K5": 0.0,
+      "K6": 0.0,
+      "K7": 5.0,
+      "K8": 10.0
+    },
+    "exactitud_wape_global_pct": 72.61366704077376,
+    "exactitud_wape_por_kpi": {
+      "K1": 98.925,
+      "K2": 95.808,
+      "K3": 45.254,
+      "K4": 99.692,
+      "K5": 99.639,
+      "K6": 0.0,
+      "K7": 42.02,
+      "K8": 99.571
+    },
+    "globales": {
+      "K1": {
+        "modelo": 20183,
+        "verdad": 20000,
+        "error_rel_pct": 0.92
+      },
+      "K3": {
+        "modelo": 1020,
+        "verdad": 480,
+        "error_rel_pct": 112.5
+      },
+      "K6": {
+        "modelo": 586,
+        "verdad": 57,
+        "error_rel_pct": 928.07
+      },
+      "K4": {
+        "modelo": 5.298,
+        "verdad": 5.288,
+        "error_rel_pct": 0.2
+      },
+      "K5": {
+        "modelo": 80.749,
+        "verdad": 80.922,
+        "error_rel_pct": 0.21
+      }
+    }
+  },
+  "e1_tolerante": {
+    "N": 37926,
+    "x_descartados": 1010,
+    "y_fusionados": 17063,
+    "z_unicas": 19853,
+    "conciliacion_ok": true,
+    "solicitudes_reales": 20000,
+    "registros_fuente_conservados": 36916,
+    "solicitudes_reales_representadas": 19868,
+    "duplicados_no_detectados": 104,
+    "fusiones_erroneas": 119,
+    "dedup_precision_pct": 99.09029649595688,
+    "dedup_recall_pct": 99.31976071015052,
+    "tasa_duplicados_eliminados_pct": 44.99024415967938,
+    "completitud_asignacion_pct": 100.0,
+    "hito_asignacion_exacto_pct": 96.4392141017223,
+    "hito_asignacion_dentro_1dia_pct": 99.9292893580484,
+    "hito_asignacion_imputado_pct": 0.6363957775645235,
+    "completitud_atencion_pct": 99.36033015217951,
+    "hito_atencion_exacto_pct": 97.29505217797623,
+    "hito_atencion_dentro_1dia_pct": 99.83905300867038,
+    "hito_atencion_imputado_pct": 36.65720918235749,
+    "completitud_cierre_pct": 99.34339778719884,
+    "hito_cierre_exacto_pct": 91.90215977101222,
+    "hito_cierre_dentro_1dia_pct": 99.86989331251627,
+    "hito_cierre_imputado_pct": 0.0,
+    "pendientes_fantasma": 124,
+    "completitud_hitos_global_pct": 99.56790931312612,
+    "dias_total_exacto_pct": 97.87653808213489,
+    "flag_en_plazo_discrepante_pct": 0.3115103057992835,
+    "exactitud_por_solicitud_pct": 97.87653808213489,
+    "error_dias_total_habiles": {
+      "0": 18852,
+      "1": 371,
+      "-1": 12,
+      "-2": 6,
+      "-3": 4,
+      "-4": 3,
+      "2": 2,
+      "-10": 2,
+      "-6": 2,
+      "-7": 2,
+      "3": 1,
+      "-11": 1,
+      "-8": 1,
+      "21": 1,
+      "-14": 1
+    },
+    "exactitud_kpi_global_pct": 86.09790134004461,
+    "exactitud_kpi_por_kpi": {
+      "K1": 99.261,
+      "K2": 94.402,
+      "K3": 86.067,
+      "K4": 99.611,
+      "K5": 99.614,
+      "K6": 25.214,
+      "K7": 86.643,
+      "K8": 97.971
+    },
+    "celdas_exactas_por_kpi": {
+      "K1": 14.0,
+      "K2": 15.0,
+      "K3": 0.0,
+      "K4": 12.0,
+      "K5": 2.0,
+      "K6": 4.0,
+      "K7": 7.5,
+      "K8": 0.0
+    },
+    "exactitud_wape_global_pct": 83.98215822088974,
+    "exactitud_wape_por_kpi": {
+      "K1": 99.265,
+      "K2": 98.266,
+      "K3": 88.91,
+      "K4": 99.683,
+      "K5": 99.622,
+      "K6": 0.0,
+      "K7": 86.78,
+      "K8": 99.331
+    },
+    "globales": {
+      "K1": {
+        "modelo": 19853,
+        "verdad": 20000,
+        "error_rel_pct": 0.73
+      },
+      "K3": {
+        "modelo": 591,
+        "verdad": 480,
+        "error_rel_pct": 23.12
+      },
+      "K6": {
+        "modelo": 171,
+        "verdad": 57,
+        "error_rel_pct": 200.0
+      },
+      "K4": {
+        "modelo": 5.3,
+        "verdad": 5.288,
+        "error_rel_pct": 0.23
+      },
+      "K5": {
+        "modelo": 80.739,
+        "verdad": 80.922,
+        "error_rel_pct": 0.23
+      }
+    }
+  },
+  "efecto_scd2_CERT": {
+    "n": 1682,
+    "csla_con_scd2": 80.91557669441141,
+    "csla_sin_scd2": 58.73959571938169
+  },
+  "e2_global": [
+    {
+      "escala": 1,
+      "cache": "caliente",
+      "media": 0.008704227500008226,
+      "p95": 0.018106204992363924,
+      "maximo": 0.0269308999995701
+    },
+    {
+      "escala": 1,
+      "cache": "fria",
+      "media": 0.01734654750058932,
+      "p95": 0.04610478499525925,
+      "maximo": 0.0826573000085773
+    },
+    {
+      "escala": 10,
+      "cache": "caliente",
+      "media": 0.09605254333358365,
+      "p95": 0.2804631149934721,
+      "maximo": 0.49577409999619704
+    },
+    {
+      "escala": 10,
+      "cache": "fria",
+      "media": 0.10649766749957053,
+      "p95": 0.22991827500663925,
+      "maximo": 0.44219889999658335
+    },
+    {
+      "escala": 100,
+      "cache": "caliente",
+      "media": 0.5205928608330699,
+      "p95": 1.161388389999047,
+      "maximo": 1.5002167000056943
+    },
+    {
+      "escala": 100,
+      "cache": "fria",
+      "media": 0.5529978695835477,
+      "p95": 1.2812658449889567,
+      "maximo": 1.938414100004593
+    }
+  ],
+  "entorno": [
+    "python=3.13.10",
+    "so=Windows-11-10.0.26200-SP0",
+    "cpu_logicas_host=14",
+    "pandas=3.1.1",
+    "numpy=2.5.5",
+    "db=postgres",
+    "PostgreSQL 16.16 (Debian 16.16-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+    "shared_buffers=128MB"
+  ],
+  "segundos_totales": 1871.7
+}

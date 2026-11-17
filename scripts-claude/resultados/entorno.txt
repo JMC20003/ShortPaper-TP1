@@ -1,0 +1,8 @@
+python=3.13.10
+so=Windows-11-10.0.26200-SP0
+cpu_logicas_host=14
+pandas=3.1.1
+numpy=2.5.5
+db=postgres
+PostgreSQL 16.16 (Debian 16.16-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+shared_buffers=128MB

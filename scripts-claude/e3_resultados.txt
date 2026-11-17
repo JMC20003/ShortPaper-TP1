@@ -1,0 +1,21 @@
+=== RESULTADOS E3 ===
+Tiempo por reporte (min):
+           count   mean    std
+condicion                     
+manual        16  29.50  11.44
+modelo        16   4.56   1.82
+Reducción del tiempo medio por reporte = 84.5 %  (29.50 -> 4.56 min)
+
+Participantes con ambas condiciones: n = 8
+Reducción individual media = 84.5 %  (min 80.6 %, max 90.3 %)
+IC 95 % (bootstrap) de la reducción global = [82.7 %, 86.8 %]
+Prueba de permutación de signos (pareada): p una cola = 0.0039 | p dos colas = 0.0078
+(con n=8 el menor p posible a dos colas es 0.0078)
+Tamaño del efecto (d de Cohen pareado) = 4.53
+H1 (reducción >= 30 %): SE CONFIRMA
+Orden/periodo (control del diseño cruzado): {('manual', 'A'): 24.38, ('manual', 'B'): 34.62, ('modelo', 'A'): 5.38, ('modelo', 'B'): 3.75}
+
+% de reportes correctos por condición:
+condicion
+manual     87.5
+modelo    100.0
